@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            🎓 CampusConnect
+        </a>
+        <button class="navbar-toggle" id="navToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 2rem; background-color: var(--light-gray);">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary-dark); margin-bottom: 3rem; font-size: 2rem;">
+                📧 Get In Touch With Us
+            </h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <!-- Contact Info Card 1 -->
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--primary-blue); font-size: 1.5rem;">📍 Our Address</h3>
+                    <p style="margin-top: 1rem;">
+                        CampusConnect Headquarters<br>
+                        Tech Park Building<br>
+                        University Campus<br>
+                        City, State 123456
+                    </p>
+                </div>
+
+                <!-- Contact Info Card 2 -->
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--primary-blue); font-size: 1.5rem;">📞 Phone & Email</h3>
+                    <p style="margin-top: 1rem;">
+                        <strong>Main:</strong> +1 (800) 123-4567<br>
+                        <strong>Support:</strong> +1 (800) 987-6543<br>
+                        <strong>Email:</strong> support@campusconnect.com<br>
+                        <strong>Response Time:</strong> 24 hours
+                    </p>
+                </div>
+
+                <!-- Contact Info Card 3 -->
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--primary-blue); font-size: 1.5rem;">🕐 Office Hours</h3>
+                    <p style="margin-top: 1rem;">
+                        <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br>
+                        <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br>
+                        <strong>Sunday:</strong> Closed<br>
+                        <strong>Holidays:</strong> Closed
+                    </p>
+                </div>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="form-container">
+                <h3 style="text-align: center; color: var(--primary-dark); margin-bottom: 2rem;">
+                    Send us a Message
+                </h3>
+
+                <form id="contactForm">
+                    <!-- Name Input -->
+                    <div class="form-group">
+                        <label for="contactName">👤 Full Name</label>
+                        <input 
+                            type="text" 
+                            id="contactName" 
+                            name="name" 
+                            placeholder="John Doe"
+                            required
+                        >
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="contactEmail">📧 Email Address</label>
+                        <input 
+                            type="email" 
+                            id="contactEmail" 
+                            name="email" 
+                            placeholder="john@college.edu"
+                            required
+                        >
+                    </div>
+
+                    <!-- Phone Input -->
+                    <div class="form-group">
+                        <label for="contactPhone">📱 Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="contactPhone" 
+                            name="phone" 
+                            placeholder="+1 (XXX) XXX-XXXX"
+                        >
+                    </div>
+
+                    <!-- Subject Input -->
+                    <div class="form-group">
+                        <label for="contactSubject">💭 Subject</label>
+                        <select id="contactSubject" name="subject" required>
+                            <option>Select Subject</option>
+                            <option>Bug Report</option>
+                            <option>Feature Request</option>
+                            <option>General Inquiry</option>
+                            <option>Technical Support</option>
+                            <option>Partnership</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="form-group">
+                        <label for="contactMessage">💬 Message</label>
+                        <textarea 
+                            id="contactMessage" 
+                            name="message" 
+                            placeholder="Tell us about your inquiry or feedback..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1rem;">
+                        Send Message
+                    </button>
+
+                    <p style="text-align: center; margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                        ✓ We'll respond to your message within 24 hours
+                    </p>
+                </form>
+            </div>
+
+            <!-- SOCIAL MEDIA SECTION -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Follow Us on Social Media</h3>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" class="btn-primary" style="padding: 0.75rem 1.5rem; text-decoration: none;">
+                        📘 Facebook
+                    </a>
+                    <a href="#" class="btn-primary" style="padding: 0.75rem 1.5rem; text-decoration: none;">
+                        🐦 Twitter
+                    </a>
+                    <a href="#" class="btn-primary" style="padding: 0.75rem 1.5rem; text-decoration: none;">
+                        📸 Instagram
+                    </a>
+                    <a href="#" class="btn-primary" style="padding: 0.75rem 1.5rem; text-decoration: none;">
+                        💼 LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section style="background-color: var(--white); padding: 4rem 2rem;">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 2rem;">❓ Frequently Asked Questions</h2>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Q: How do I sign up for CampusConnect?</h4>
+                    <p style="color: #666;">
+                        A: Visit our login page and click on "Sign Up". Fill in your details and verify your email to create your account.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Q: Is CampusConnect free to use?</h4>
+                    <p style="color: #666;">
+                        A: Yes! CampusConnect is completely free for all students. We believe in making education management accessible to everyone.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Q: How can I report a technical issue?</h4>
+                    <p style="color: #666;">
+                        A: You can report issues through this contact form or email us at support@campusconnect.com with details of the problem.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Q: Is my data safe and secure?</h4>
+                    <p style="color: #666;">
+                        A: Yes! We use industry-standard encryption and security protocols to protect your personal data. Your privacy is our priority.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Q: Can I use CampusConnect on mobile devices?</h4>
+                    <p style="color: #666;">
+                        A: Absolutely! CampusConnect is fully responsive and works seamlessly on smartphones, tablets, and desktops.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 CampusConnect. All rights reserved.</p>
+        <p>Making College Life Easier, One Feature at a Time.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Handle contact form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            alert(`Thank you ${name}!\n\nYour message has been received. We'll get back to you within 24 hours.\n\nNote: This is Phase 1 (Static HTML). Email integration will be added in later phases.`);
+            contactForm.reset();
+        });
+    </script>
+</body>
+
+</html>

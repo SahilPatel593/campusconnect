@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            🎓 CampusConnect
+        </a>
+        <button class="navbar-toggle" id="navToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html" class="btn-primary" style="padding: 0.5rem 1rem; border-radius: 5px;">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+        <!-- SIDEBAR MENU -->
+        <aside class="sidebar">
+            <h3 style="padding: 1rem 1.5rem; color: var(--primary-blue); border-bottom: 2px solid var(--primary-blue);">
+                📚 Menu
+            </h3>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html" class="active">📊 Dashboard</a></li>
+                <li><a href="attendance.html">✓ Attendance</a></li>
+                <li><a href="notes.html">📝 Notes</a></li>
+                <li><a href="events.html">🎉 Events</a></li>
+                <li><a href="#assignments">📋 Assignments</a></li>
+                <li><a href="#timetable">📅 Timetable</a></li>
+                <li><a href="contact.html">📧 Contact</a></li>
+                <li><a href="login.html">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Welcome Header -->
+            <div class="card">
+                <h2 style="color: var(--primary-dark); display: flex; align-items: center; gap: 0.5rem;">
+                    👋 Welcome to Your Dashboard
+                </h2>
+                <p>
+                    Here you can view your academic information, manage assignments, check attendance, and stay updated with college events.
+                </p>
+            </div>
+
+            <!-- STATS SECTION -->
+            <div class="attendance-stats">
+                <div class="stat-box">
+                    <h4>92%</h4>
+                    <p>Overall Attendance</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                    <h4>8/12</h4>
+                    <p>Assignments Submitted</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);">
+                    <h4>5</h4>
+                    <p>Upcoming Events</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">
+                    <h4>3</h4>
+                    <p>Pending Tasks</p>
+                </div>
+            </div>
+
+            <!-- DASHBOARD CARDS GRID -->
+            <div class="card-grid">
+                <!-- Attendance Card -->
+                <div class="card">
+                    <h3>✓ Attendance Status</h3>
+                    <div class="card-content">
+                        <p><strong>Overall:</strong> 92%</p>
+                        <p><strong>This Month:</strong> 94%</p>
+                        <p><strong>Last Week:</strong> 95%</p>
+                        <p style="margin-top: 1rem;">
+                            <a href="attendance.html" style="color: var(--primary-blue); text-decoration: none; font-weight: bold;">
+                                View Details →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Notes Card -->
+                <div class="card">
+                    <h3>📝 Recent Notes</h3>
+                    <div class="card-content">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                📄 Data Structures - Lecture 5
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                📄 Web Development Basics
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                📄 Database Design Principles
+                            </li>
+                        </ul>
+                        <p style="margin-top: 1rem;">
+                            <a href="notes.html" style="color: var(--primary-blue); text-decoration: none; font-weight: bold;">
+                                View All Notes →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Events Card -->
+                <div class="card">
+                    <h3>🎉 Upcoming Events</h3>
+                    <div class="card-content">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                🎯 Tech Fest 2024 - May 25
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                🏆 Coding Competition - June 2
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                🎬 Movie Night - June 8
+                            </li>
+                        </ul>
+                        <p style="margin-top: 1rem;">
+                            <a href="events.html" style="color: var(--primary-blue); text-decoration: none; font-weight: bold;">
+                                View All Events →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Assignments Card -->
+                <div class="card">
+                    <h3>📋 Pending Assignments</h3>
+                    <div class="card-content">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                ⏰ Math Assignment - Due May 25
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                ⏰ Project Report - Due May 28
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                ⏰ Essay - Due June 1
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Study Group Card -->
+                <div class="card">
+                    <h3>👥 Study Groups</h3>
+                    <div class="card-content">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                📚 Data Structures Group (12 members)
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                💻 Web Dev Squad (8 members)
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                🔬 Science Hub (15 members)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Card -->
+                <div class="card">
+                    <h3>⚡ Quick Actions</h3>
+                    <div class="card-content">
+                        <button class="btn-primary" style="width: 100%; margin-bottom: 0.5rem;">
+                            + New Note
+                        </button>
+                        <button class="btn-secondary" style="width: 100%; margin-bottom: 0.5rem;">
+                            + Create Assignment
+                        </button>
+                        <button class="btn-secondary" style="width: 100%;">
+                            + Join Event
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 CampusConnect. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

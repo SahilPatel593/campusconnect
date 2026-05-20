@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            🎓 CampusConnect
+        </a>
+        <button class="navbar-toggle" id="navToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+        <!-- SIDEBAR MENU -->
+        <aside class="sidebar">
+            <h3 style="padding: 1rem 1.5rem; color: var(--primary-blue); border-bottom: 2px solid var(--primary-blue);">
+                📚 Menu
+            </h3>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="attendance.html">✓ Attendance</a></li>
+                <li><a href="notes.html">📝 Notes</a></li>
+                <li><a href="events.html" class="active">🎉 Events</a></li>
+                <li><a href="#assignments">📋 Assignments</a></li>
+                <li><a href="#timetable">📅 Timetable</a></li>
+                <li><a href="contact.html">📧 Contact</a></li>
+                <li><a href="login.html">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="card">
+                <h2 style="color: var(--primary-dark);">🎉 College Events & Activities</h2>
+                <p>Stay updated with all upcoming college events, fests, competitions, and club activities.</p>
+            </div>
+
+            <!-- FILTERS -->
+            <div class="card">
+                <h3>🔍 Filter Events</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <select id="eventCategory">
+                            <option>All Categories</option>
+                            <option>Academic</option>
+                            <option>Sports</option>
+                            <option>Cultural</option>
+                            <option>Club Activities</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <select id="eventMonth">
+                            <option>All Months</option>
+                            <option>May 2024</option>
+                            <option>June 2024</option>
+                            <option>July 2024</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVENTS GRID -->
+            <div class="card-grid">
+                <!-- Event Card 1 -->
+                <div class="card">
+                    <h3>🎯 Tech Fest 2024</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> May 25-26, 2024</p>
+                        <p><strong>⏰ Time:</strong> 9:00 AM - 6:00 PM</p>
+                        <p><strong>📍 Location:</strong> Main Auditorium</p>
+                        <p><strong>Category:</strong> Academic</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Annual technology festival featuring workshops, coding competitions, and tech talks from industry experts.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="card">
+                    <h3>🏆 Coding Competition</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> June 2, 2024</p>
+                        <p><strong>⏰ Time:</strong> 2:00 PM - 5:00 PM</p>
+                        <p><strong>📍 Location:</strong> Computer Lab Block-A</p>
+                        <p><strong>Category:</strong> Academic</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Inter-college coding competition with prizes worth ₹50,000. Teams of 3 members required.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="card">
+                    <h3>🎬 Movie Night</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> June 8, 2024</p>
+                        <p><strong>⏰ Time:</strong> 7:00 PM - 10:00 PM</p>
+                        <p><strong>📍 Location:</strong> Lawn Area</p>
+                        <p><strong>Category:</strong> Cultural</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Open-air movie screening with snacks and refreshments. Bring your friends and enjoy!
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="card">
+                    <h3>⚽ Sports Fest</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> June 15-17, 2024</p>
+                        <p><strong>⏰ Time:</strong> 9:00 AM - 5:00 PM</p>
+                        <p><strong>📍 Location:</strong> Sports Complex</p>
+                        <p><strong>Category:</strong> Sports</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Inter-college sports event with cricket, football, badminton, and athletic competitions.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 -->
+                <div class="card">
+                    <h3>🎨 Art & Design Workshop</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> June 10, 2024</p>
+                        <p><strong>⏰ Time:</strong> 10:00 AM - 1:00 PM</p>
+                        <p><strong>📍 Location:</strong> Art Studio</p>
+                        <p><strong>Category:</strong> Workshop</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Learn digital art, graphic design, and UI/UX design from professional designers.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 -->
+                <div class="card">
+                    <h3>🎤 Annual Talent Show</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> June 22, 2024</p>
+                        <p><strong>⏰ Time:</strong> 6:00 PM - 9:00 PM</p>
+                        <p><strong>📍 Location:</strong> Auditorium</p>
+                        <p><strong>Category:</strong> Cultural</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Showcase your talents! Singing, dancing, comedy, and performances by talented students.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 7 -->
+                <div class="card">
+                    <h3>📚 Seminar: AI & Machine Learning</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> June 5, 2024</p>
+                        <p><strong>⏰ Time:</strong> 2:00 PM - 4:00 PM</p>
+                        <p><strong>📍 Location:</strong> Seminar Hall</p>
+                        <p><strong>Category:</strong> Academic</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Expert talk on Artificial Intelligence and Machine Learning applications in industry.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 8 -->
+                <div class="card">
+                    <h3>🍽️ Freshers Party</h3>
+                    <div class="card-content">
+                        <p><strong>📅 Date:</strong> June 20, 2024</p>
+                        <p><strong>⏰ Time:</strong> 5:00 PM - 10:00 PM</p>
+                        <p><strong>📍 Location:</strong> Lawn Area</p>
+                        <p><strong>Category:</strong> Club Activities</p>
+                        <p style="margin-top: 1rem; color: #666;">
+                            Welcome party for new students with music, food, dancing, and fun activities.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">✓ Register</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Interested</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 CampusConnect. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

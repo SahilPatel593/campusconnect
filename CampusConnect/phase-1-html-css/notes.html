@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Notes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            🎓 CampusConnect
+        </a>
+        <button class="navbar-toggle" id="navToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+        <!-- SIDEBAR MENU -->
+        <aside class="sidebar">
+            <h3 style="padding: 1rem 1.5rem; color: var(--primary-blue); border-bottom: 2px solid var(--primary-blue);">
+                📚 Menu
+            </h3>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="attendance.html">✓ Attendance</a></li>
+                <li><a href="notes.html" class="active">📝 Notes</a></li>
+                <li><a href="events.html">🎉 Events</a></li>
+                <li><a href="#assignments">📋 Assignments</a></li>
+                <li><a href="#timetable">📅 Timetable</a></li>
+                <li><a href="contact.html">📧 Contact</a></li>
+                <li><a href="login.html">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="card">
+                <h2 style="color: var(--primary-dark);">📝 Shared Notes Repository</h2>
+                <p>Upload, share, and download lecture notes from your courses.</p>
+            </div>
+
+            <!-- UPLOAD SECTION -->
+            <div class="card">
+                <h3>📤 Upload New Notes</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="noteTitle">Note Title</label>
+                        <input 
+                            type="text" 
+                            id="noteTitle" 
+                            placeholder="e.g., Data Structures - Lecture 5"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteSubject">Subject</label>
+                        <select id="noteSubject" required>
+                            <option>Select Subject</option>
+                            <option>Data Structures</option>
+                            <option>Web Development</option>
+                            <option>Database Design</option>
+                            <option>Software Engineering</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteDescription">Description</label>
+                        <textarea 
+                            id="noteDescription" 
+                            placeholder="Brief description of the notes..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteFile">📎 Upload File (PDF, DOC, Images)</label>
+                        <input type="file" id="noteFile">
+                    </div>
+
+                    <button type="submit" class="btn-primary">Upload Notes</button>
+                </form>
+            </div>
+
+            <!-- SEARCH & FILTER -->
+            <div class="card">
+                <h3>🔍 Search Notes</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <input 
+                            type="text" 
+                            placeholder="Search by title..." 
+                            id="searchInput"
+                        >
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <select id="filterSubject">
+                            <option>All Subjects</option>
+                            <option>Data Structures</option>
+                            <option>Web Development</option>
+                            <option>Database Design</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOTES CARDS GRID -->
+            <div class="card-grid">
+                <!-- Note Card 1 -->
+                <div class="card">
+                    <h3>📄 Data Structures - Lecture 5</h3>
+                    <div class="card-content">
+                        <p><strong>Subject:</strong> Data Structures</p>
+                        <p><strong>Date:</strong> May 20, 2024</p>
+                        <p><strong>Shared by:</strong> John Doe</p>
+                        <p><strong>Downloads:</strong> 24</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                            Comprehensive notes on binary trees, tree traversal algorithms, and applications.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">⬇ Download</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Like</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note Card 2 -->
+                <div class="card">
+                    <h3>📄 Web Development Basics</h3>
+                    <div class="card-content">
+                        <p><strong>Subject:</strong> Web Development</p>
+                        <p><strong>Date:</strong> May 19, 2024</p>
+                        <p><strong>Shared by:</strong> Jane Smith</p>
+                        <p><strong>Downloads:</strong> 18</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                            Introduction to HTML5, CSS3, and JavaScript fundamentals for web development.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">⬇ Download</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Like</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note Card 3 -->
+                <div class="card">
+                    <h3>📄 Database Design Principles</h3>
+                    <div class="card-content">
+                        <p><strong>Subject:</strong> Database Design</p>
+                        <p><strong>Date:</strong> May 18, 2024</p>
+                        <p><strong>Shared by:</strong> Mike Johnson</p>
+                        <p><strong>Downloads:</strong> 32</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                            SQL queries, database normalization, and schema design best practices.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">⬇ Download</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Like</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note Card 4 -->
+                <div class="card">
+                    <h3>📄 Software Engineering Patterns</h3>
+                    <div class="card-content">
+                        <p><strong>Subject:</strong> Software Engineering</p>
+                        <p><strong>Date:</strong> May 17, 2024</p>
+                        <p><strong>Shared by:</strong> Sarah Wilson</p>
+                        <p><strong>Downloads:</strong> 15</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                            Design patterns, SOLID principles, and software architecture concepts.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">⬇ Download</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Like</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note Card 5 -->
+                <div class="card">
+                    <h3>📄 Advanced Data Structures</h3>
+                    <div class="card-content">
+                        <p><strong>Subject:</strong> Data Structures</p>
+                        <p><strong>Date:</strong> May 16, 2024</p>
+                        <p><strong>Shared by:</strong> Tom Brown</p>
+                        <p><strong>Downloads:</strong> 28</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                            Graphs, heaps, hash tables, and their applications in solving complex problems.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">⬇ Download</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Like</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note Card 6 -->
+                <div class="card">
+                    <h3>📄 Frontend Frameworks</h3>
+                    <div class="card-content">
+                        <p><strong>Subject:</strong> Web Development</p>
+                        <p><strong>Date:</strong> May 15, 2024</p>
+                        <p><strong>Shared by:</strong> Emily Davis</p>
+                        <p><strong>Downloads:</strong> 22</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                            React, Vue, and Angular frameworks for modern web application development.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <button class="btn-primary" style="flex: 1; padding: 0.5rem;">⬇ Download</button>
+                            <button class="btn-secondary" style="flex: 1; padding: 0.5rem;">❤ Like</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 CampusConnect. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Form submission
+        document.querySelector('.card form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Notes uploaded successfully! This is Phase 1 - Static HTML');
+        });
+    </script>
+</body>
+
+</html>

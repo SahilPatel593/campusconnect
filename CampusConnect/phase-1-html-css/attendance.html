@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            🎓 CampusConnect
+        </a>
+        <button class="navbar-toggle" id="navToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+        <!-- SIDEBAR MENU -->
+        <aside class="sidebar">
+            <h3 style="padding: 1rem 1.5rem; color: var(--primary-blue); border-bottom: 2px solid var(--primary-blue);">
+                📚 Menu
+            </h3>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="attendance.html" class="active">✓ Attendance</a></li>
+                <li><a href="notes.html">📝 Notes</a></li>
+                <li><a href="events.html">🎉 Events</a></li>
+                <li><a href="#assignments">📋 Assignments</a></li>
+                <li><a href="#timetable">📅 Timetable</a></li>
+                <li><a href="contact.html">📧 Contact</a></li>
+                <li><a href="login.html">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="card">
+                <h2 style="color: var(--primary-dark);">✓ Attendance Tracker</h2>
+                <p>Monitor your class attendance and stay informed about your attendance status.</p>
+            </div>
+
+            <!-- STATS SECTION -->
+            <div class="attendance-stats">
+                <div class="stat-box">
+                    <h4>92%</h4>
+                    <p>Overall Attendance</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                    <h4>46/50</h4>
+                    <p>Classes Attended</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">
+                    <h4>4</h4>
+                    <p>Classes Missed</p>
+                </div>
+            </div>
+
+            <!-- FILTERS -->
+            <div class="card">
+                <h3>🔍 Filter Attendance</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label for="filterSubject">Subject</label>
+                        <select id="filterSubject">
+                            <option>All Subjects</option>
+                            <option>Data Structures</option>
+                            <option>Web Development</option>
+                            <option>Database Design</option>
+                            <option>Software Engineering</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label for="filterMonth">Month</label>
+                        <select id="filterMonth">
+                            <option>May 2024</option>
+                            <option>April 2024</option>
+                            <option>March 2024</option>
+                            <option>February 2024</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label for="filterStatus">Status</label>
+                        <select id="filterStatus">
+                            <option>All</option>
+                            <option>Present</option>
+                            <option>Absent</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ATTENDANCE TABLE -->
+            <div class="card">
+                <h3>📋 Attendance Record</h3>
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Class</th>
+                            <th>Status</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>May 20, 2024</td>
+                            <td>Data Structures</td>
+                            <td>CSE-101</td>
+                            <td><span class="status-present">✓ Present</span></td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>May 19, 2024</td>
+                            <td>Web Development</td>
+                            <td>CSE-102</td>
+                            <td><span class="status-present">✓ Present</span></td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>May 18, 2024</td>
+                            <td>Database Design</td>
+                            <td>CSE-103</td>
+                            <td><span class="status-absent">✗ Absent</span></td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td>May 17, 2024</td>
+                            <td>Software Engineering</td>
+                            <td>CSE-104</td>
+                            <td><span class="status-present">✓ Present</span></td>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td>May 16, 2024</td>
+                            <td>Data Structures</td>
+                            <td>CSE-101</td>
+                            <td><span class="status-present">✓ Present</span></td>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td>May 15, 2024</td>
+                            <td>Web Development</td>
+                            <td>CSE-102</td>
+                            <td><span class="status-absent">✗ Absent</span></td>
+                            <td>87%</td>
+                        </tr>
+                        <tr>
+                            <td>May 14, 2024</td>
+                            <td>Database Design</td>
+                            <td>CSE-103</td>
+                            <td><span class="status-present">✓ Present</span></td>
+                            <td>88%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SUBJECT-WISE ATTENDANCE -->
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Data Structures (CSE-101)</h3>
+                    <div class="card-content">
+                        <p><strong>Attendance:</strong> 95%</p>
+                        <p><strong>Classes:</strong> 19/20</p>
+                        <p style="color: #28a745; font-weight: bold;">✓ Excellent</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Web Development (CSE-102)</h3>
+                    <div class="card-content">
+                        <p><strong>Attendance:</strong> 88%</p>
+                        <p><strong>Classes:</strong> 18/20</p>
+                        <p style="color: #ffc107; font-weight: bold;">⚠ Good</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Database Design (CSE-103)</h3>
+                    <div class="card-content">
+                        <p><strong>Attendance:</strong> 90%</p>
+                        <p><strong>Classes:</strong> 18/20</p>
+                        <p style="color: #28a745; font-weight: bold;">✓ Good</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Software Engineering (CSE-104)</h3>
+                    <div class="card-content">
+                        <p><strong>Attendance:</strong> 92%</p>
+                        <p><strong>Classes:</strong> 23/25</p>
+                        <p style="color: #28a745; font-weight: bold;">✓ Excellent</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 CampusConnect. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
