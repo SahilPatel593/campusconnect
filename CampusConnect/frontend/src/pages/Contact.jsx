@@ -25,145 +25,74 @@ function Contact() {
     setFormData({ name: '', email: '', subject: '', message: '' })
   }
 
-  const mainStyle = {
-    maxWidth: '800px',
-    margin: '0 auto',
-    padding: '2rem'
-  }
-
-  const formStyle = {
-    backgroundColor: isDarkMode ? '#2d2d2d' : 'white',
-    padding: '2rem',
-    borderRadius: '8px',
-    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)'
-  }
-
-  const inputStyle = {
-    width: '100%',
-    padding: '0.75rem',
-    marginBottom: '1rem',
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    fontFamily: 'inherit',
-    backgroundColor: isDarkMode ? '#333' : 'white',
-    color: isDarkMode ? '#f0f0f0' : '#333'
-  }
-
   return (
-    <div style={mainStyle}>
-      <h2 style={{
-        textAlign: 'center',
-        color: isDarkMode ? 'white' : '#001F3F',
-        marginBottom: '2rem'
-      }}>
-        📧 Get In Touch With Us
-      </h2>
+    <div className={`${isDarkMode ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-950'} min-h-screen px-4 py-12 sm:px-6 lg:px-8`}>
+      <div className="mx-auto max-w-3xl">
+        <h2 className={`text-center text-3xl font-bold sm:text-4xl ${isDarkMode ? 'text-white' : 'text-slate-950'}`}>
+          📧 Get In Touch With Us
+        </h2>
 
-      <div style={formStyle}>
-        <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '1.5rem' }}>
-            <label style={{
-              display: 'block',
-              marginBottom: '0.5rem',
-              color: isDarkMode ? '#f0f0f0' : '#001F3F',
-              fontWeight: '500'
-            }}>
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              style={inputStyle}
-              required
-            />
-          </div>
+        <div className={`mt-10 rounded-3xl border ${isDarkMode ? 'border-slate-700 bg-slate-900/95' : 'border-slate-200 bg-white'} p-6 shadow-xl shadow-slate-900/10 transition-colors duration-300`}>
+          <form onSubmit={handleSubmit} className="grid gap-6">
+            <div className="grid gap-3">
+              <label className={`text-sm font-semibold ${isDarkMode ? 'text-slate-200' : 'text-slate-900'}`}>Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                className="input-field"
+                required
+              />
+            </div>
 
-          <div style={{ marginBottom: '1.5rem' }}>
-            <label style={{
-              display: 'block',
-              marginBottom: '0.5rem',
-              color: isDarkMode ? '#f0f0f0' : '#001F3F',
-              fontWeight: '500'
-            }}>
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="your@email.com"
-              style={inputStyle}
-              required
-            />
-          </div>
+            <div className="grid gap-3">
+              <label className={`text-sm font-semibold ${isDarkMode ? 'text-slate-200' : 'text-slate-900'}`}>Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="your@email.com"
+                className="input-field"
+                required
+              />
+            </div>
 
-          <div style={{ marginBottom: '1.5rem' }}>
-            <label style={{
-              display: 'block',
-              marginBottom: '0.5rem',
-              color: isDarkMode ? '#f0f0f0' : '#001F3F',
-              fontWeight: '500'
-            }}>
-              Subject
-            </label>
-            <input
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              placeholder="Your Subject"
-              style={inputStyle}
-              required
-            />
-          </div>
+            <div className="grid gap-3">
+              <label className={`text-sm font-semibold ${isDarkMode ? 'text-slate-200' : 'text-slate-900'}`}>Subject</label>
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                placeholder="Your Subject"
+                className="input-field"
+                required
+              />
+            </div>
 
-          <div style={{ marginBottom: '1.5rem' }}>
-            <label style={{
-              display: 'block',
-              marginBottom: '0.5rem',
-              color: isDarkMode ? '#f0f0f0' : '#001F3F',
-              fontWeight: '500'
-            }}>
-              Message
-            </label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your message..."
-              style={{
-                ...inputStyle,
-                resize: 'vertical',
-                minHeight: '120px'
-              }}
-              required
-            />
-          </div>
+            <div className="grid gap-3">
+              <label className={`text-sm font-semibold ${isDarkMode ? 'text-slate-200' : 'text-slate-900'}`}>Message</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your message..."
+                className="input-field min-h-[16rem] resize-none"
+                required
+              />
+            </div>
 
-          <button
-            type="submit"
-            style={{
-              width: '100%',
-              padding: '1rem',
-              backgroundColor: '#0099FF',
-              color: 'white',
-              border: 'none',
-              borderRadius: '8px',
-              fontSize: '1.1rem',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#0077CC'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = '#0099FF'}
-          >
-            Send Message
-          </button>
-        </form>
+            <button
+              type="submit"
+              className="rounded-3xl bg-[#0099FF] px-6 py-4 text-base font-semibold text-white transition hover:bg-blue-500"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   )

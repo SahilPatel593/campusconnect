@@ -9,41 +9,6 @@ import { useApp } from '../App'
 function Home() {
   const { isDarkMode } = useApp()
 
-  const heroStyle = {
-    background: 'linear-gradient(135deg, #001F3F 0%, #003f7f 100%)',
-    color: 'white',
-    padding: '6rem 2rem',
-    textAlign: 'center',
-    minHeight: '70vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-
-  const featuresStyle = {
-    padding: '4rem 2rem',
-    backgroundColor: isDarkMode ? '#2d2d2d' : 'white'
-  }
-
-  const featuresGridStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: '2rem',
-    maxWidth: '1200px',
-    margin: '0 auto'
-  }
-
-  const featureCardStyle = {
-    backgroundColor: isDarkMode ? '#333' : '#f5f5f5',
-    padding: '2rem',
-    borderRadius: '8px',
-    textAlign: 'center',
-    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
-    transition: 'all 0.3s ease',
-    cursor: 'pointer'
-  }
-
   const features = [
     { icon: '📊', title: 'Track Attendance', description: 'Monitor your attendance and never miss important classes.' },
     { icon: '✓', title: 'Manage Assignments', description: 'Keep track of all your assignments with due dates.' },
@@ -54,96 +19,72 @@ function Home() {
   ]
 
   return (
-    <div>
-      {/* HERO SECTION */}
-      <section style={heroStyle}>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>Welcome to CampusConnect</h1>
-        <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>
-          Your Smart College Companion App - Manage your student life efficiently
-        </p>
-        <div>
-          <Link to="/login" style={{
-            backgroundColor: '#0099FF',
-            color: 'white',
-            padding: '0.75rem 2rem',
-            marginRight: '1rem',
-            borderRadius: '8px',
-            textDecoration: 'none',
-            display: 'inline-block',
-            transition: 'all 0.3s ease'
-          }}>
-            Get Started
+    <div className={`${isDarkMode ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-950'} transition-colors duration-300`}>
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-900 to-blue-800 px-4 py-20 text-white sm:px-6 lg:px-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center text-center gap-8">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Welcome to CampusConnect</h1>
+            <p className="max-w-3xl text-base leading-8 sm:text-xl sm:leading-9 text-slate-200">
+              Your Smart College Companion App - Manage your student life efficiently.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <Link
+              to="/login"
+              className="inline-flex items-center justify-center rounded-full bg-[#0099FF] px-8 py-3 text-base font-semibold text-white transition hover:bg-blue-500"
+            >
+              Get Started
+            </Link>
+            <a
+              href="#features"
+              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-slate-950 transition hover:bg-slate-100"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className={`${isDarkMode ? 'bg-slate-900' : 'bg-white'} px-4 py-16 sm:px-6 lg:px-12`} id="features">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Key Features</h2>
+            <p className={`mt-4 max-w-2xl mx-auto text-sm sm:text-base ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
+              Everything you need to stay on top of college life — attendance, assignments, notes, events, and more.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {features.map((feature, idx) => (
+              <div
+                key={idx}
+                className={`group rounded-3xl p-6 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl ${isDarkMode ? 'bg-slate-800 text-slate-100' : 'bg-slate-50 text-slate-950'}`}
+              >
+                <div className="mb-5 text-4xl">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className={`text-sm leading-7 ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#001F3F] px-4 py-16 sm:px-6 lg:px-12">
+        <div className="mx-auto max-w-7xl text-center">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">Ready to Transform Your College Experience?</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">
+            Join thousands of students using CampusConnect.
+          </p>
+          <Link
+            to="/login"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-[#0099FF] px-8 py-3 text-base font-semibold text-white transition hover:bg-blue-500"
+          >
+            Join Now
           </Link>
-          <a href="#features" style={{
-            backgroundColor: 'white',
-            color: '#001F3F',
-            padding: '0.75rem 2rem',
-            borderRadius: '8px',
-            textDecoration: 'none',
-            display: 'inline-block',
-            transition: 'all 0.3s ease'
-          }}>
-            Learn More
-          </a>
         </div>
-      </section>
-
-      {/* FEATURES SECTION */}
-      <section style={featuresStyle} id="features">
-        <h2 style={{
-          textAlign: 'center',
-          fontSize: '2.5rem',
-          marginBottom: '3rem',
-          color: isDarkMode ? 'white' : '#001F3F'
-        }}>
-          Key Features
-        </h2>
-        <div style={featuresGridStyle}>
-          {features.map((feature, idx) => (
-            <div key={idx} style={featureCardStyle} onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)'
-              e.currentTarget.style.transform = 'translateY(-10px)'
-            }} onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)'
-              e.currentTarget.style.transform = 'translateY(0)'
-            }}>
-              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{feature.icon}</div>
-              <h3 style={{ color: isDarkMode ? '#0099FF' : '#001F3F', marginBottom: '0.5rem' }}>
-                {feature.title}
-              </h3>
-              <p style={{ color: isDarkMode ? '#ccc' : '#666' }}>
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section style={{
-        backgroundColor: '#001F3F',
-        color: 'white',
-        padding: '4rem 2rem',
-        textAlign: 'center'
-      }}>
-        <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
-          Ready to Transform Your College Experience?
-        </h2>
-        <p style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-          Join thousands of students using CampusConnect
-        </p>
-        <Link to="/login" style={{
-          backgroundColor: '#0099FF',
-          color: 'white',
-          padding: '0.75rem 2rem',
-          borderRadius: '8px',
-          textDecoration: 'none',
-          display: 'inline-block',
-          transition: 'all 0.3s ease',
-          fontSize: '1.1rem'
-        }}>
-          Join Now
-        </Link>
       </section>
     </div>
   )

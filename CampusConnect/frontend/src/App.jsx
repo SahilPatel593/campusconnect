@@ -150,17 +150,6 @@ function App() {
   };
 
   // =======================
-  // App Theme Style
-  // =======================
-
-  const appStyle = {
-    backgroundColor: isDarkMode ? '#121212' : '#ffffff',
-    color: isDarkMode ? '#f5f5f5' : '#000000',
-    minHeight: '100vh',
-    transition: 'all 0.3s ease',
-  };
-
-  // =======================
   // JSX
   // =======================
 
@@ -176,7 +165,7 @@ function App() {
       }}
     >
       <Router>
-        <div style={appStyle}>
+        <div className={`${isDarkMode ? 'dark' : ''} min-h-screen bg-slate-50 text-slate-950 transition-colors duration-300 dark:bg-slate-950 dark:text-white`}>
           {/* =======================
               Navbar
           ======================= */}
@@ -185,35 +174,23 @@ function App() {
           {/* =======================
               Notifications
           ======================= */}
-          <div
-            style={{
-              position: 'fixed',
-              top: '80px',
-              right: '20px',
-              zIndex: 999,
-            }}
-          >
-            {notifications.map((notification) => (
-              <div
-                key={notification.id}
-                style={{
-                  backgroundColor:
+          <div className="fixed inset-x-0 top-24 z-50 flex justify-end px-4 sm:px-6">
+            <div className="w-full max-w-sm space-y-3 pointer-events-none">
+              {notifications.map((notification) => (
+                <div
+                  key={notification.id}
+                  className={`pointer-events-auto rounded-2xl px-4 py-3 text-sm font-medium text-white shadow-lg transition ${
                     notification.type === 'success'
-                      ? '#4CAF50'
+                      ? 'bg-emerald-500'
                       : notification.type === 'error'
-                      ? '#FF6B6B'
-                      : '#2196F3',
-                  color: '#fff',
-                  padding: '12px 20px',
-                  marginBottom: '10px',
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-                  minWidth: '220px',
-                }}
-              >
-                {notification.message}
-              </div>
-            ))}
+                      ? 'bg-red-500'
+                      : 'bg-blue-500'
+                  }`}
+                >
+                  {notification.message}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* =======================
